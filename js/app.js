@@ -439,42 +439,6 @@ if (giftBox && downloads) {
 }
 
 /* ==========================================================
-   DOWNLOAD BUTTONS
-========================================================== */
-
-const downloadButtons = document.querySelectorAll(".download-button");
-
-downloadButtons.forEach(button => {
-
-    button.addEventListener("click", (event) => {
-
-        event.preventDefault();
-
-        button.classList.add("clicked");
-
-        const originalText = button.textContent;
-
-        button.textContent = "Preparing Download...";
-
-        setTimeout(() => {
-
-            button.textContent = "Ready!";
-
-        }, 1200);
-
-        setTimeout(() => {
-
-            button.textContent = originalText;
-
-            button.classList.remove("clicked");
-
-        }, 2500);
-
-    });
-
-});
-
-/* ==========================================================
    BIRTHDAY HEADER
 ========================================================== */
 
